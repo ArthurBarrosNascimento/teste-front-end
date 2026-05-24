@@ -12,7 +12,7 @@ Uma vitrine de produtos responsiva desenvolvida em **React** com **TypeScript**,
 Este projeto implementa uma página de e-commerce com:
 - 🛍️ Vitrine de produtos dinâmica consumindo dados em JSON
 - 🎯 Modal interativo para visualização de detalhes do produto
-- 📱 Design responsivo e pixel-perfect conforme layout
+- 📱 pixel-perfect conforme layout
 - ♿ HTML semântico para melhor acessibilidade e SEO
 - 🎨 Pré-processador SASS para estilização avançada
 - 🚀 Build otimizado com Vite
