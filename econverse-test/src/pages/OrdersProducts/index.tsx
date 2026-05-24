@@ -1,6 +1,10 @@
 function Orders() {
     return (<>
-        <p>Pedidos</p>
+        <main>
+            <section>
+                <p>Pedidos</p>
+            </section>
+        </main>
     </>)
 }
 

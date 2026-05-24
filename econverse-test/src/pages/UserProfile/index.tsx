@@ -1,6 +1,10 @@
 function UserProfile() {
     return(<>
-        Perfil
+        <main>
+            <section>
+                Perfil
+            </section>
+        </main>
     </>);
 }
 

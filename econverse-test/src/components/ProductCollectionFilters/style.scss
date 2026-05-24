@@ -1,0 +1,58 @@
+@use '../../style/variables.scss' as *;
+
+
+#filter_component_products {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 3rem;
+    width: 100%;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-family: $font-poppins;
+        font-size: 14px;
+        font-weight: 500;
+        color: $text-description-color;
+        transition: 0.2s;
+    
+
+        .icon-product-filter {
+            width: 128px;
+            height: 128px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background-color: $bg-filter-produts;
+            box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.13);
+
+            svg {
+                width: 61px;
+                height: 61px;
+                color: black;
+            }
+        }
+
+        
+    }
+
+    div:hover {
+        .icon-product-filter {
+            background-color: $hover-bg-color;
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.22);
+
+            svg {
+                color: $hover-color;
+            }
+        }
+
+        .text-filter-products {
+            color: $hover-color;
+        }
+    }
+}

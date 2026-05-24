@@ -1,6 +1,10 @@
 function FavoriteProducts() {
     return(<>
-        <p>produtos favoritos</p>
+        <main>
+            <section>
+                <p>produtos favoritos</p>
+            </section>
+        </main>
     </>);
 }
 

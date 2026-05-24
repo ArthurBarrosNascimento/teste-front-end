@@ -1,6 +1,10 @@
 function ProductCollections() {
     return(<>
-        <p>coleções de produtos</p>
+        <main>
+            <section>
+                <p>coleções de produtos</p>
+            </section>
+        </main>
     </>)
 }
 

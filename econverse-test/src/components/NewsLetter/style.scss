@@ -1,0 +1,104 @@
+@use '../../style/variables.scss' as *;
+
+#newsletter_section {
+    width: 100%;
+    background: #2B1B5A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 4rem;
+    gap: 3rem;
+    flex-wrap: wrap;
+
+    #description_form {
+        max-width: 520px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+
+        h3 {
+            margin: 0;
+            font-family: $font-poppins;
+            font-size: 32px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        p {
+            margin: 0;
+            font-family: $font-poppins;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 140%;
+            color: #FFFFFF;
+        }
+    }
+
+    #newsletter_input {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        .newsletter_fields {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            flex-wrap: wrap;
+
+            input {
+                width: 240px;
+                height: 48px;
+                border: none;
+                border-radius: 8px;
+                padding: 0 1rem;
+                outline: none;
+                font-family: $font-poppins;
+                font-size: 14px;
+                background: #FFFFFF;
+                color: #3F3F40;
+
+                &::placeholder {
+                    color: #9F9F9F;
+                }
+            }
+
+            button {
+                width: 157px;
+                height: 48px;
+                border: none;
+                border-radius: 8px;
+                background: #F7CA11;
+                color: #271C47;
+                font-family: $font-poppins;
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+        .newsletter_terms {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+
+            input[type="checkbox"] {
+                width: 14px;
+                height: 14px;
+                cursor: pointer;
+            }
+
+            label {
+                font-family: $font-poppins;
+                font-size: 14px;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+        }
+    }
+}

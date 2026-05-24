@@ -7,7 +7,7 @@ import { IoIosFitness } from "react-icons/io";
 import { PiDress } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
-
+import "./style.scss";
 
 function ProductCollectionFilters() {
     const filterOtions = [
@@ -49,16 +49,21 @@ function ProductCollectionFilters() {
     ]
 
     return(<>
-        <div id="filter_component_products">
+        <nav id="filter_component_products">
             { filterOtions.map((e, i) => (
                 <div key={i}>
                     <Link to={e.path}>
-                        {e.icon}
-                        <p>{e.filterName}</p>
+                        <div className="icon-product-filter">
+                            {e.icon}
+                        </div>
                     </Link>
+
+                    <div className="text-filter-products">
+                        <p>{e.filterName}</p>
+                    </div>
                 </div>
             ))}
-        </div>
+        </nav>
     </>);
 }
 

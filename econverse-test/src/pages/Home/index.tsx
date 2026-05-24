@@ -6,20 +6,24 @@ import RelatedProducts from "../../components/RelatedProducts";
 import BrandingProduct from "../../components/BrandingProducts";
 import NewsLetter from "../../components/NewsLetter";
 import Footer from "../../components/Footer";
+import PopUpProduct from "../../components/PopUpProduct";
 
 function Home() {
     return(<>
         <Header />
-        <MainBanner />
-        <ProductCollectionFilters />
-        <RelatedProducts hasFilter="true" />
-        <PartnersStore />
-        <RelatedProducts hasFilter="" />
-        <PartnersStore />
-        <BrandingProduct />
-        <RelatedProducts hasFilter="" />
-        <NewsLetter />
+        <main>
+            <MainBanner />
+            <ProductCollectionFilters />
+            <RelatedProducts hasFilter="true" />
+            <PartnersStore />
+            <RelatedProducts hasFilter="" />
+            <PartnersStore />
+            <BrandingProduct />
+            <RelatedProducts hasFilter="" />
+            <NewsLetter />
+        </main>
         <Footer />
+        <PopUpProduct />
     </>)
 }
 

@@ -1,0 +1,116 @@
+@use '../../style/variables.scss' as *;
+@use "sass:color";
+
+.product_card_main {
+  width: 100%;
+  max-width: 304px;
+  height: 520px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.13);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 1rem;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.12);
+  }
+
+  .product_card_link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    .product_img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1.5rem;
+
+      img {
+        width: 100%;
+        max-width: 220px;
+        height: 220px;
+        object-fit: contain;
+      }
+    }
+
+    .description-product-infos {
+      display: flex;
+      flex-direction: column;
+      padding: 1rem 1.2rem;
+      color: $text-description-color;
+      gap: 0.4rem;
+      font-family: $font-poppins;
+
+      .product_description {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #3f3f40;
+        margin-bottom: 0.5rem;
+      }
+
+      .product_discount_price {
+        font-size: 14px;
+        font-weight: 400;
+        color: #9e9e9e;
+        text-decoration: line-through;
+      }
+
+      .product_price {
+        font-size: 22px;
+        font-weight: 700;
+        color: #3f3f40;
+        line-height: 1;
+      }
+
+      .product_payment_methods {
+        font-size: 12px;
+        font-weight: 400;
+        color: #3f3f40;
+      }
+
+      .product_info_delivery {
+        font-size: 12px;
+        font-weight: 500;
+        color: #2b44b8;
+      }
+    }
+  }
+
+  .product_buy_btn_container {
+    padding: 0 1.2rem 1.2rem 1.2rem; 
+    margin-top: auto;
+
+    .product_buy_btn {
+      width: 100%;
+      background-color: #2b44b8; 
+      color: #ffffff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 0; 
+      
+      font-family: $font-poppins;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      
+      cursor: pointer;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+
+      &:hover {
+        background-color:
+          color.adjust(#2b44b8, $lightness: -5%);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}

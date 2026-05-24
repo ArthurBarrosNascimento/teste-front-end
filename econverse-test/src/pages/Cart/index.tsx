@@ -1,5 +1,9 @@
 function Cart() {
-    return(<></>)
+    return(<>
+        <main>
+            {/* Conteúdo do carrinho será adicionado aqui */}
+        </main>
+    </>)
 }
 
 export default Cart;

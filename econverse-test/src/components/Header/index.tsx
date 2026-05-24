@@ -1,7 +1,7 @@
 import { AiOutlineSafety } from "react-icons/ai";
 import { TbTruck } from "react-icons/tb";
 import { FaRegCreditCard } from "react-icons/fa6";
-import { FaSearch } from "react-icons/fa";
+import { CiSearch } from "react-icons/ci";
 import { FaBox } from "react-icons/fa";
 import { CiHeart } from "react-icons/ci";
 import { RxAvatar } from "react-icons/rx";
@@ -9,7 +9,7 @@ import { IoCartOutline } from "react-icons/io5";
 import { LuCrown } from "react-icons/lu";
 
 
-
+import "./style.scss"
 
 import { Link } from "react-router-dom";
 
@@ -19,15 +19,21 @@ import logo from '../../assets/Logo.png'
 export function Header() {
     const topBarInfo = [
         {
-            description: "Compra 100% segura",
+            before: "Compra",
+            highlight: "100% segura",
+            after: "",
             icon: <AiOutlineSafety />
         },
         {
-            description: "Frete grátis acima de R$ 200",
+            before: "",
+            highlight: "Frete grátis",
+            after: "acima de R$ 200",
             icon: <TbTruck />
         },
         {
-            description: "Parcele suas compras",
+            before: "",
+            highlight: "Parcele",
+            after: "suas compras",
             icon: <FaRegCreditCard />
         },
     ];
@@ -86,12 +92,18 @@ export function Header() {
     ]
 
     return(<>
-        <div id="header_main">
+        <header id="header_main">
             <div id="topbar">
                 {topBarInfo.map((e, i) => (
-                    <div key={i}>
+                    <div key={i} className="item_nav">
                         {e.icon}
-                        <p>{e.description}</p>
+                        <p>
+                            {e.before && <span>{e.before} </span>}
+
+                            <strong>{e.highlight}</strong>
+
+                            {e.after && <span> {e.after}</span>}
+                        </p>
                     </div>
                 ))}
             </div>
@@ -99,7 +111,7 @@ export function Header() {
             <div id="info_main_header">
 
                 <div id="logo_header">
-                    <img src={ logo } alt="" />
+                    <img src={ logo } alt="Logo Econverse" />
                 </div>
 
                 <div id="search_bar_header">
@@ -109,7 +121,7 @@ export function Header() {
                     
                     />
 
-                    <FaSearch />
+                    <CiSearch />
                 </div>
 
                 <div id="other_infos">
@@ -127,7 +139,7 @@ export function Header() {
                 </div>
             </div>
 
-            <div id="nav_link_header">
+            <nav id="nav_link_header">
                 { navLinks.map((e, i) => (
                     <div key={i}>
                         <Link to={e.path}>
@@ -136,8 +148,8 @@ export function Header() {
                         </Link>
                     </div>
                 ))}
-            </div>
-        </div>
+            </nav>
+        </header>
     </>)
 }
 
